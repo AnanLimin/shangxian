@@ -49,7 +49,7 @@
 					<li><a href="<%=basePath%>user/adminindex.do">首页<span class="sr-only">(current)</span></a></li>
 					<li><a href="<%=basePath %>signed/signedinfo.do">销售管理</a></li>
 					<li class="active"><a href="<%=basePath %>signed/firstincomepay.do">财务管理</a></li>
-					<li><a href="<%=basePath %>signed/ourmanagment.do">我的工作</a></li>
+					<li><a href="<%=basePath %>signed/ourmanagment.do">待办工作</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

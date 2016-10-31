@@ -22,7 +22,7 @@
 					<li class="active"><a href="<%=basePath %>user/login.do">首页<span class="sr-only">(current)</span></a></li>
 					<li><a href="<%=basePath %>signed/signedinfo.do">销售管理</a></li>
 					<li><a href="<%=basePath %>signed/firstincomepay.do">财务管理</a></li>
-					<li><a href="<%=basePath %>signed/ourmanagment.do">我的工作</a></li>
+					<li><a href="<%=basePath %>signed/ourmanagment.do">待办工作</a></li>
 					<%-- <li><a href="<%=basePath %>signed/signedinfo.do">培训管理</a></li>
 					<li><a href="<%=basePath %>signed/signedinfo.do">就业管理</a></li>
 					<li><a href="<%=basePath %>signed/signedinfo.do">考勤管理</a></li>
