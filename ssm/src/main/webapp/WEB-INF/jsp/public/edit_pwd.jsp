@@ -49,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<li class="active"><a href="<%=basePath %>emp/adminindex.do">管理首页<span class="sr-only">(current)</span></a></li>
 					<li><a href="<%=basePath %>signed/signedinfo.do">销售管理</a></li>
 					<li><a href="<%=basePath %>signed/firstincomepay.do">财务管理</a></li>
-					<li><a href="<%=basePath %>signed/ourmanagment.do">我的工作</a></li>
+					<li><a href="<%=basePath %>signed/ourmanagment.do">待办工作</a></li>
 					<%-- <li><a href="<%=basePath %>signed/status.do?status=3&pagenum=1">返款</a></li>
 					<li><a href="<%=basePath %>signed/status.do?status=4&pagenum=1">退款</a></li> --%>
 				</ul>
