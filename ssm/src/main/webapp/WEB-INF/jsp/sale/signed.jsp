@@ -39,6 +39,47 @@
 <script type="text/javascript" src="<%=basePath%>myjs/financial.js"></script>
 <script type="text/javascript" src="<%=basePath%>myjs/signed.js"></script>
 <script type="text/javascript" src="<%=basePath%>myjs/BackMoney.js"></script>
+<style type="text/css">
+
+*{ margin:0; padding:0}
+ul{
+ list-style: none;
+}
+.tab{
+ width: 600px;
+}
+.tab .tab_menu{
+ height: 30px;
+ width: 600px; 
+
+}
+.tab .tab_menu ul li.butclose{
+	float: left;
+ text-align: center;
+ margin-left: 380px;
+
+}
+.tab .tab_menu ul li{
+ float: left;
+ text-align: center;
+ margin-left: 25px;
+
+}
+.tab .tab_menu ul li:last-child{
+ border-right:none;
+
+}
+.tab .tab_menu ul li.on{
+ background: #999;
+}
+.tab .tab_box > div{
+ display: none; //将三个内容框架全隐藏，通过下面的:first-child属性只将第一个框架内容显示出来
+}
+.tab .tab_box > div:first-child{
+ display: block;
+}
+
+</style>
 </head>
 
 <body>
@@ -127,6 +168,7 @@
 							 	<c:if test="${signed.condition=='已收款'}">
 							 	<tr class="info">
 							 	</c:if>
+							 	<tr  class="clickbythis">
 								  <td>&nbsp;&nbsp;<input type="checkbox" value="${signed.sid}" name="signed_checkbox"></td>
 								  <td>${signed.sid}</td>
 								  <td>${signed.stime}</td>
@@ -448,6 +490,159 @@
       </form>
 		</div>
 	</div>
+</div>
+
+
+
+
+
+<!-- 详细信息 -->
+<div class="modal" id="SigneDetailsInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">      
+        <div class="tab">
+         
+         	<div class="tab_menu">		
+			 <ul >
+         		<li class="on" >	
+					基本信息
+				</li>
+			
+				<li >
+					其他信息
+				</li>
+								
+			</ul>	
+			<ul>
+				<li class="butclose">				
+				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>		
+				</li>
+			
+			</ul>		
+		</div> 
+		
+	<div>   
+<div class="tab_box">
+      <div class="modal-body">  
+      	<div class="table-responsive">
+      		<table class="table" id="baseInfomation">
+				<tbody>
+					<tr>
+						<td>签单编号：</td>
+						<td>
+							 <input class="input-sm form-control" name="sid"  value="" readonly="readonly">
+						</td>
+						<td>签单时间：</td>
+						<td>
+							 <input class="input-sm form-control" name="stime"  value="" readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td>客户姓名：</td>
+						<td>
+							 <input class="input-sm form-control" name="scustomername"  value="" readonly="readonly">
+						</td>
+						<td>客户人数：</td>
+						<td>
+							 <input class="input-sm form-control" name="speoplenum"  value="" readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td>客户学校：</td>
+						<td>
+							 <input class="input-sm form-control" name="scustomerschool"  value="" readonly="readonly">
+						</td>
+						<td>客户年纪：</td>
+						<td>
+							 <input class="input-sm form-control" name="scustomergrade"  value=""readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td>客户院系：</td>
+						<td>
+							 <input class="input-sm form-control" name="scustomercollege"  value="" readonly="readonly">
+						</td>
+						<td>客户专业：</td>
+						<td>
+							 <input class="input-sm form-control" name="scustomermajor"  value="" readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td>身份证：</td>
+						<td>
+							 <input class="input-sm form-control" name="scustomercardid"  value=""readonly="readonly">
+						</td>
+						<td>银行卡：</td>
+						<td>
+							 <input class="input-sm form-control" name="scustomerbankcardid"  value="" readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td>业务类型：</td>
+						<td>
+							 <input class="input-sm form-control" name="sbusinesstype"  value="" readonly="readonly">
+						</td>
+						<td>区域：</td>
+						<td>
+							 <input class="input-sm form-control" name="sarea"  value=""readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td>备注：</td>
+						<td colspan="4">
+							 <textarea class="input-sm form-control" name="sremark" style="resize: none;" readonly="readonly">
+							</textarea>
+						</td>
+					</tr>
+				</tbody>
+   			</table>
+   			</div>
+	 </div>
+
+ 	<div class="modal-body">  
+      	<div class="table-responsive">
+      		<table class="table" id="baseInfomation" >
+      			<tr>
+						<td>学费：</td>
+						<td>
+							 <input class="input-sm form-control" name="studyfee"  value="" readonly="readonly">
+						</td>
+						<td>住宿费：</td>
+						<td>
+							 <input class="input-sm form-control" name="spacefee"  value="" readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td>返款：</td>
+						<td>
+							 <input class="input-sm form-control" name="backfee"  value="" readonly="readonly">
+						</td>
+						<td>定金：</td>
+						<td>
+							 <input class="input-sm form-control" name="depositfee"  value="" readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td>备注：</td>
+						<td colspan="4">
+							 <textarea class="input-sm form-control" name="sremark" style="resize: none;" readonly="readonly">
+							</textarea>
+						</td>
+					</tr>
+   			</table>
+   		</div>
+	</div>
+</div>
+
+ <div class="modal-footer">
+	       	 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>	     
+</div>	    
+      </div>     
+	</div>
+		</div>
+</div>
+</div>
 </div>
 <%@ include file="../public/footer.jsp"%>
 	<!-- Bootstrap core JavaScript  ================================================== -->

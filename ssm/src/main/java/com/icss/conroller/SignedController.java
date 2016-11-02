@@ -378,5 +378,19 @@ public class SignedController {
 		signedBusiness.agree(session, request);		
 		return "redirect:/signed/ourmanagment.do";
 	}
+	/**
+	 * @author chen
+	 * @param session
+	 * @return 通过json,sid来查询。
+	 */
+	
+	@RequestMapping("selectByPrimaryKey.do")
+	public@ResponseBody String selectByPrimaryKey(HttpServletRequest request,HttpSession session){
+		int sid = Integer.parseInt(request.getParameter("sid"));
+		List<Signed> signed=signedBusiness.selectByPrimaryKey(sid);		
+		JSONArray jsonArray = JSONArray.fromObject(signed);
+		return jsonArray.toString();
+
+	}
 	
 }

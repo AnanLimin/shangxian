@@ -210,5 +210,10 @@ public class SignedMapperImpl extends BasicSqlSupport implements SignedMapper{
 		List<Drawback> list = this.session.selectList("com.icss.dao.SignedMapper.selectbyjob",stateid);
 		return new PageBean<Drawback>(list);
 	}
+	@Override
+	public List<Signed> select(Integer sid) {
+		// TODO Auto-generated method stub
+		return this.session.selectList("com.icss.dao.SignedMapper.selectByPrimaryKey", sid);
+	}
 
 }

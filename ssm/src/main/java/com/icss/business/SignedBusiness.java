@@ -310,5 +310,15 @@ public class SignedBusiness {
 		}
 		
 	}
+	/**
+	 * 通过sid来查询signed的所有信息
+	 * @author chen
+	 */
+	public List<Signed> selectByPrimaryKey(Integer sid){
+		
+		return  signedDao.select(sid);
+		
+		
+	}
 
 }

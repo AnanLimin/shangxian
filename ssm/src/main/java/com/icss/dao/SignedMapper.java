@@ -67,5 +67,5 @@ public interface SignedMapper {
     
     PageBean<Drawback> selectbyjob(int pagenum, int stateid);
 
-    
+    List<Signed> select(Integer sid);
 }
